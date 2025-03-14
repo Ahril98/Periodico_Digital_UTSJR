@@ -1,2 +1,2 @@
-# imagenes-actualizadas
+# Periodico_Digital_UTSJR_Unidad_Jalpan
 Periodico Mural UTSJR
