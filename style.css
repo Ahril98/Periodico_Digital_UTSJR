@@ -1,0 +1,25 @@
+        /* Estilos personalizados para mejorar la presentación */
+        .img-container {
+            margin-bottom: 20px;
+        }
+        
+        .img-caption {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        /* Opción para limitar altura máxima si es necesario */
+        .img-height-limit {
+            max-height: 300px;
+            object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+        }
+        
+        /* Para crear un efecto de galería */
+        .gallery-img {
+            transition: transform 0.3s;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
