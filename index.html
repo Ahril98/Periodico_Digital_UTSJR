@@ -6,60 +6,165 @@
     <title>Periódico Escolar</title>
     <!-- Incluir Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .img-container {
+            margin-bottom: 30px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .img-container:hover img {
+            transform: scale(1.02);
+        }
+        
+        /* Añadimos margen a las secciones para que el scroll llegue correctamente */
+        section {
+            padding-top: 70px;
+            margin-top: -70px; /* Compensamos el padding para que visualmente no haya espacio extra */
+        }
+        
+
+        .main-img-container {
+
+        }
+        
+
+        .section-title {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+
+        }
+        
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-1">
-            <a class="navbar-brand" href="#" >Periodico Escolar Unidad Jalpan</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Ultima Publicación <span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Directorio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Noticias Principales</a>
-                            <a class="dropdown-item" href="#">Deportes </a>
-                            <a class="dropdown-item" href="#">Academicos</a>
-                        </div>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Periódico Escolar Unidad Jalpan</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Ultima Publicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Directorio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Secciones
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#noticias-principales">Noticias Principales</a></li>
+                                <li><a class="dropdown-item" href="#deportes">Deportes</a></li>
+                                <li><a class="dropdown-item" href="#academicos">Académicos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <div>
-             <div class="row">
-                <div class="col-12 col-md-12 col-lg-12 ">
-                <img src="img/1.png" alt="Portada" class="img-fluid">
+    
+    <div style="height: 70px;"></div>
+    
+    <div class="container mt-4">
+        <section id="noticias-principales">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="img-container main-img-container">
+                        <img src="img/1.png" alt="Noticia Principal" class="img-fluid">
+                    </div>
                 </div>
-             </div>
-             <div class="row">
-                <div class="col-12 col-md-12 col-lg-12 ">
-                <img src="img/2.png" alt="Portada" class="img-fluid">
+            </div>
+        </section>
+        
+        <section>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="img-container">
+                        <img src="img/2.png" alt="Noticia Secundaria" class="img-fluid">
+                    </div>
                 </div>
-             </div>
-             <div class="row">
-                <div class="col-12 col-md-12 col-lg-12 ">
-                <img src="img/3.png" alt="Portada" class="img-fluid">
+            </div>
+        </section>
+        
+        <section id="academicos">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="img-container">
+                        <img src="img/3.png" alt="Noticias Académicas" class="img-fluid">
+                    </div>
                 </div>
-             </div>
-             <div class="row">
-                <div class="col-12 col-md-12 col-lg-12 ">
-                <img src="img/4.png" alt="Portada" class="img-fluid">
+            </div>
+        </section>
+        
+        <section>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="img-container">
+                        <img src="img/4.png" alt="Otras Noticias" class="img-fluid">
+                    </div>
                 </div>
-             </div>
+            </div>
+        </section>
+        
+        <section id="deportes">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="img-container">
+                        <img src="img/5.png" alt="Noticias Deportivas" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (!targetElement) return;
+                    
+                    // Realizar scroll suave
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
